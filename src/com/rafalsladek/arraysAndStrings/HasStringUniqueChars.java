@@ -1,11 +1,18 @@
 package com.rafalsladek.arraysAndStrings;
 
 import java.util.Arrays;
-import java.util.HashMap;
 import java.util.HashSet;
 
 public class HasStringUniqueChars {
 
+
+    /**
+     * Using xor operator we if have any duplicates.
+     * 0 ^ a = a
+     * a ^ a = 1
+     * @param input
+     * @return true if all characters are unique, otherwise false.
+     */
     public static boolean hasAllUniqueCharactersXOR(final String input) {
 
         char[] inputArray = input.toCharArray();
@@ -18,7 +25,6 @@ public class HasStringUniqueChars {
 
         for (int i = 0; i < numArray.length; i++) {
             xorComperator = xorComperator ^ numArray[i];
-            //System.out.println(xorComperator);
             if (xorComperator == 0) {
                 return false;
             } else {
