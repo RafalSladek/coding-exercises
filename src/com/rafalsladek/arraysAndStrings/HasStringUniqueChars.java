@@ -5,7 +5,6 @@ import java.util.HashSet;
 
 public class HasStringUniqueChars {
 
-
     /**
      * Using xor operator we proof if there is any duplicate character in string.
      * 0 ^ a = a
