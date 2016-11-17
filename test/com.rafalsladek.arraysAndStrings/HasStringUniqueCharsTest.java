@@ -8,25 +8,33 @@ public class HasStringUniqueCharsTest {
     @Test
     public void testingStringWithAA()  {
         String input = "aa";
-        assertTrue(HasStringUniqueChars.hasAllUniqueCharacters(input));
+        assertTrue(!HasStringUniqueChars.hasAllUniqueCharactersXOR(input));
+        assertTrue(!HasStringUniqueChars.hasAllUniqueCharactesStream(input));
+        assertTrue(!HasStringUniqueChars.hasAllUniqueCharactersHashMap(input));
     }
 
     @Test
     public void testingStringWithAAA()  {
         String input = "aaa";
-        assertTrue(HasStringUniqueChars.hasAllUniqueCharacters(input));
+        assertTrue(!HasStringUniqueChars.hasAllUniqueCharactersXOR(input));
+        assertTrue(!HasStringUniqueChars.hasAllUniqueCharactesStream(input));
+        assertTrue(!HasStringUniqueChars.hasAllUniqueCharactersHashMap(input));
     }
 
     @Test
     public void testingStringWithoutDuplicatedChars()  {
         String input = "abcdefghijk";
-        assertTrue(!HasStringUniqueChars.hasAllUniqueCharacters(input));
+        assertTrue(HasStringUniqueChars.hasAllUniqueCharactesStream(input));
+        assertTrue(HasStringUniqueChars.hasAllUniqueCharactersXOR(input));
+        assertTrue(HasStringUniqueChars.hasAllUniqueCharactersHashMap(input));
     }
 
 
     @Test
     public void testingStringWithDuplicatedChars()  {
         String input = "abcdefffgh";
-        assertTrue(HasStringUniqueChars.hasAllUniqueCharacters(input));
+        assertTrue(!HasStringUniqueChars.hasAllUniqueCharactersXOR(input));
+        assertTrue(!HasStringUniqueChars.hasAllUniqueCharactesStream(input));
+        assertTrue(!HasStringUniqueChars.hasAllUniqueCharactersHashMap(input));
     }
 }
