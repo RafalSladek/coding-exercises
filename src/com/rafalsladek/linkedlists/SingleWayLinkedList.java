@@ -1,10 +1,10 @@
 package com.rafalsladek.linkedlists;
 
-public class LinkedList {
+public class SingleWayLinkedList {
 
     public Node head;
 
-    public LinkedList() {
+    public SingleWayLinkedList() {
     }
 
     public boolean isEmpty() {

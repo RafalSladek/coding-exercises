@@ -4,10 +4,10 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class LinkedListTest {
+public class SingleWayLinkedListTest {
     @Test
     public void isEmpty() throws Exception {
-        LinkedList list = new LinkedList();
+        SingleWayLinkedList list = new SingleWayLinkedList();
         assertTrue(list.isEmpty());
         Node node1 = new Node(1);
         list.add(node1);
@@ -17,7 +17,7 @@ public class LinkedListTest {
 
     @Test
     public void add() throws Exception {
-        LinkedList input = new LinkedList();
+        SingleWayLinkedList input = new SingleWayLinkedList();
         Node first = new Node(1);
         Node second = new Node(2);
         input.add(first);
@@ -29,7 +29,7 @@ public class LinkedListTest {
 
     @Test
     public void remove() throws Exception {
-        LinkedList input = new LinkedList();
+        SingleWayLinkedList input = new SingleWayLinkedList();
         Node first = new Node(1);
         Node second = new Node(2);
         input.add(first);
