@@ -5,13 +5,31 @@ public class RotateMatrix {
     private static char[][] input = {{'a', 'b', 'c'}, {'d', 'e', 'f'}, {'g', 'h', 'i'}};
 
     public static void main(String[] args) {
-        printMatrix(input);
+        char[][] out = rotateMatrix(input);
+        printMatrix(out);
     }
 
+    /**
+     * Rotates input matrix clocwise 90°.
+     * Here how it can be transofr to array
+     * row  0     1    2    n
+     * abcd efgh ijkl mnop
+     * miea njfb okgc plhd
+     * we shit element (row+1)* (n - col) to the left
+     * @param inputMatrix
+     * @return
+     */
     public static char[][] rotateMatrix(char[][] inputMatrix) {
-
-        return inputMatrix;
-
+        int n = inputMatrix.length;
+        int lastIndex = n - 1;
+        char[][] output = new char[n][n];
+        for (int col = 0; col < n; col++) {
+            for (int row = lastIndex; row >= 0; row--) {
+                // switching col with row
+                output[col][lastIndex - row] = inputMatrix[row][col];
+            }
+        }
+        return output;
     }
 
     public static void printMatrix(char[][] inputMatrix) {
