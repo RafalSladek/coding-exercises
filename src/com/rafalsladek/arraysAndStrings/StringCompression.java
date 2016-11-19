@@ -3,15 +3,16 @@ package com.rafalsladek.arraysAndStrings;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-public class StringCompression {
+class StringCompression {
 
     /**
+     * Big O(n)
      * Generate compressed string from input
      *
      * @param input
      * @return compressed string if it is shorter then input, otherwise input.
      */
-    public static String stringCompression(final String input) {
+    static String stringCompression(final String input) {
 
         LinkedHashMap<CharAndPosition, Integer> linkedHashMap = new LinkedHashMap<>();
         char[] array = input.toCharArray();
@@ -28,6 +29,7 @@ public class StringCompression {
                 linkedHashMap.put(previous, linkedHashMap.get(previous) + 1);
             }
         }
+
         StringBuilder sb = new StringBuilder();
         for (Map.Entry<CharAndPosition, Integer> entry : linkedHashMap.entrySet()) {
             sb.append(entry.getKey().getValue());
@@ -37,7 +39,7 @@ public class StringCompression {
         return input.length() > compressed.length() ? compressed : input;
     }
 
-     class CharAndPosition implements Map.Entry<String, String> {
+    private class CharAndPosition implements Map.Entry<String, String> {
 
         private final String _characterAndPosition;
         private String _character;

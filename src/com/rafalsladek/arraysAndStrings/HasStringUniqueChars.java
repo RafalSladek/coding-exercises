@@ -3,16 +3,17 @@ package com.rafalsladek.arraysAndStrings;
 import java.util.Arrays;
 import java.util.HashSet;
 
-public class HasStringUniqueChars {
+class HasStringUniqueChars {
 
     /**
      * Using xor operator we proof if there is any duplicate character in string.
      * 0 ^ a = a
      * a ^ a = 1
+     *
      * @param input
      * @return true if all characters are unique, otherwise false.
      */
-    public static boolean hasAllUniqueCharactersXOR(final String input) {
+    static boolean hasAllUniqueCharactersXOR(final String input) {
 
         char[] inputArray = input.toCharArray();
         int[] numArray = new int[inputArray.length];
@@ -33,27 +34,27 @@ public class HasStringUniqueChars {
         return xorComperator != 0;
     }
 
-    public static boolean hasAllUniqueCharactesStream(final String input) {
+    static boolean hasAllUniqueCharactesStream(final String input) {
         String distinctInput = input
                 .codePoints()
                 .distinct()
                 .collect(
-                    StringBuilder::new,
-                    StringBuilder::appendCodePoint,
-                    StringBuilder::append)
+                        StringBuilder::new,
+                        StringBuilder::appendCodePoint,
+                        StringBuilder::append)
                 .toString();
         return distinctInput.equals(input);
     }
 
-    public static boolean hasAllUniqueCharactersHashMap(final String input){
+    static boolean hasAllUniqueCharactersHashMap(final String input) {
         HashSet<String> set = new HashSet<>();
 
         char[] chars = input.toCharArray();
         for (int i = 0; i < chars.length; i++) {
             String s = String.valueOf(chars[i]);
-            if(set.contains(s)){
+            if (set.contains(s)) {
                 return false;
-            }else{
+            } else {
                 set.add(s);
             }
         }

@@ -4,6 +4,11 @@ import java.util.HashSet;
 
 class RemoveDuplicates {
 
+    /**
+     * Big O(n)
+     * @param inputList
+     * @return
+     */
     static SingleWayLinkedList removeDuplicatesWithBuffer(SingleWayLinkedList inputList) {
         HashSet<Integer> uniqueElements = new HashSet<>();
         Node current = inputList.head;

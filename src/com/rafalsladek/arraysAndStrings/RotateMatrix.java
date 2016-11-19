@@ -10,6 +10,7 @@ public class RotateMatrix {
     }
 
     /**
+     * Big O(n^2)
      * Rotates input matrix clocwise 90°.
      * Here how it can be transofr to array
      * row  0     1    2    n
@@ -19,7 +20,7 @@ public class RotateMatrix {
      * @param inputMatrix
      * @return
      */
-    public static char[][] rotateMatrix(char[][] inputMatrix) {
+    static char[][] rotateMatrix(char[][] inputMatrix) {
         int n = inputMatrix.length;
         int lastIndex = n - 1;
         char[][] output = new char[n][n];
