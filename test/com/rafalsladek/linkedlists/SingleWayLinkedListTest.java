@@ -16,6 +16,46 @@ public class SingleWayLinkedListTest {
     }
 
     @Test
+    public void equalsListWithTheSameNodes() throws Exception {
+        SingleWayLinkedList firstList = new SingleWayLinkedList();
+        firstList.add(new Node(1));
+        firstList.add(new Node(2));
+
+        SingleWayLinkedList secondList = new SingleWayLinkedList();
+        secondList.add(new Node(1));
+        secondList.add(new Node(2));
+
+        assertTrue(firstList.equals(secondList));
+    }
+
+    @Test
+    public void equalsEmptyLists() throws Exception {
+        SingleWayLinkedList firstList = new SingleWayLinkedList();
+        SingleWayLinkedList secondList = new SingleWayLinkedList();
+        assertTrue(firstList.equals(secondList));
+    }
+
+    @Test
+    public void notequalsListsWithDiffrentLength() throws Exception {
+        SingleWayLinkedList firstList = new SingleWayLinkedList();
+        firstList.add(new Node(1));
+        firstList.add(new Node(2));
+        SingleWayLinkedList secondList = new SingleWayLinkedList();
+        assertFalse(firstList.equals(secondList));
+    }
+
+    @Test
+    public void notequalsListsWithElements() throws Exception {
+        SingleWayLinkedList firstList = new SingleWayLinkedList();
+        firstList.add(new Node(1));
+        firstList.add(new Node(2));
+        SingleWayLinkedList secondList = new SingleWayLinkedList();
+        secondList.add(new Node(1));
+        secondList.add(new Node(3));
+        assertFalse(firstList.equals(secondList));
+    }
+
+    @Test
     public void add() throws Exception {
         SingleWayLinkedList input = new SingleWayLinkedList();
         Node first = new Node(1);
@@ -39,7 +79,6 @@ public class SingleWayLinkedListTest {
         assertEquals(input.head.data, second.data);
         input.remove(second);
         assertEquals(input.head, null);
-
     }
 
 }
