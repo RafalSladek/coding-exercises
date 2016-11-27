@@ -10,7 +10,9 @@ public class MergeSort {
 
     /***
      * MergeSort is splitting recursively array into two halves and then he merge
-     * time is O(N logN), space is O(N)
+     * Time : O(N logN)
+     * Space : O(N)
+     * link - https://www.youtube.com/watch?v=KF2j-9iSf4Q
      * @param array
      * @param temp
      * @param leftStart

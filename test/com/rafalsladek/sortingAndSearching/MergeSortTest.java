@@ -22,9 +22,9 @@ public class MergeSortTest {
         assertArrayEquals(expectedArray, actuallyArray);
     }
 
-    @Test
-    public void mergeSort100kNumbers() throws Exception {
-        int k = 100000;
+    @Test(timeout = 100)
+    public void mergeSortBig() throws Exception {
+        int k = 1000000;
         int[] inputArray = new int[k];
 
         for (int i = 0; i < k; i++) {

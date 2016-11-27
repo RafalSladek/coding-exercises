@@ -23,4 +23,22 @@ public class QuickSortTest {
         assertArrayEquals(expected, input);
     }
 
+    @Test(timeout = 100)
+    public void quickSortBig() throws Exception {
+        int k = 1000000;
+        int[] input = new int[k];
+
+        for (int i = 0; i < k; i++) {
+            input[i] = k - 1 - i;
+        }
+
+        int[] expected = new int[k];
+        for (int i = 0; i < k; i++) {
+            expected[i] = i;
+        }
+        QuickSort.quickSort(input, 0, input.length - 1);
+        assertArrayEquals(expected, input);
+    }
+
+
 }

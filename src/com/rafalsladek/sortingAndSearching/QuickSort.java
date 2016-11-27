@@ -4,10 +4,13 @@ import com.rafalsladek.arraysAndStrings.Tools;
 
 public class QuickSort {
     /***
-     * Quicksort O(N logN) avarage - O(n^2) if pivot is always the very left element.
+     * QuickSort
+     * Time O(N logN) average - O(n^2) if pivot is always the very left element.
+     * Space O(N)
      * 1. choose pivot. median is quite good choice.
      * 2. sort the partition
      * 3. run recursively for left side and for the right side of the array
+     * Link - https://www.youtube.com/watch?time_continue=483&v=SLauY6PpjW4
      * @param array
      * @param left
      * @param right
