@@ -2,7 +2,7 @@ package com.rafalsladek.stacksAndQueues;
 
 public class Stack<T> {
 
-    private static class StackNode<T> {
+    public static class StackNode<T> {
         T data;
         StackNode next;
 
@@ -12,7 +12,7 @@ public class Stack<T> {
         }
     }
 
-    StackNode<T> top;
+    public StackNode<T> top;
 
     public T pop() {
         if (isEmpty()) throw new NullPointerException("Stack is empty");
@@ -27,7 +27,7 @@ public class Stack<T> {
         top = current;
     }
 
-    public T peek(T data) {
+    public T peek() {
         if (isEmpty()) throw new NullPointerException("Stack is empty");
         return top.data;
     }
