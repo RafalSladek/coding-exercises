@@ -3,7 +3,7 @@ package com.rafalsladek.arraysAndStrings;
 import java.util.HashSet;
 
 
-class CheckIfStringsArePermutation {
+public class CheckIfStringsArePermutation {
 
     /**
      * Big O(n*m)
@@ -11,7 +11,7 @@ class CheckIfStringsArePermutation {
      * @param second
      * @return
      */
-    static boolean checkIfTwoStringsArePermutation(String first, String second) {
+    public static boolean checkIfTwoStringsArePermutation(String first, String second) {
         if (first.length() != second.length()) {
             return false;
         }

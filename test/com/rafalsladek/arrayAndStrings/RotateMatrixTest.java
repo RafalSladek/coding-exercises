@@ -1,5 +1,6 @@
-package com.rafalsladek.arraysAndStrings;
+package com.rafalsladek.arrayAndStrings;
 
+import com.rafalsladek.arraysAndStrings.RotateMatrix;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

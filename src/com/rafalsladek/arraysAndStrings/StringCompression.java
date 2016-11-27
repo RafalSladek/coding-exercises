@@ -3,7 +3,7 @@ package com.rafalsladek.arraysAndStrings;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-class StringCompression {
+public class StringCompression {
 
     /**
      * Big O(n)
@@ -12,7 +12,7 @@ class StringCompression {
      * @param input
      * @return compressed string if it is shorter then input, otherwise input.
      */
-    static String stringCompression(final String input) {
+    public static String stringCompression(final String input) {
 
         LinkedHashMap<CharAndPosition, Integer> linkedHashMap = new LinkedHashMap<>();
         char[] array = input.toCharArray();

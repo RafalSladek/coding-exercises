@@ -3,7 +3,7 @@ package com.rafalsladek.arraysAndStrings;
 import java.util.Arrays;
 import java.util.HashSet;
 
-class HasStringUniqueChars {
+public class HasStringUniqueChars {
 
     /**
      * Using xor operator we proof if there is any duplicate character in string.
@@ -13,7 +13,7 @@ class HasStringUniqueChars {
      * @param input
      * @return true if all characters are unique, otherwise false.
      */
-    static boolean hasAllUniqueCharactersXOR(final String input) {
+    public static boolean hasAllUniqueCharactersXOR(final String input) {
 
         char[] inputArray = input.toCharArray();
         int[] numArray = new int[inputArray.length];
@@ -34,7 +34,7 @@ class HasStringUniqueChars {
         return xorComperator != 0;
     }
 
-    static boolean hasAllUniqueCharactesStream(final String input) {
+    public static boolean hasAllUniqueCharactesStream(final String input) {
         String distinctInput = input
                 .codePoints()
                 .distinct()
@@ -46,7 +46,7 @@ class HasStringUniqueChars {
         return distinctInput.equals(input);
     }
 
-    static boolean hasAllUniqueCharactersHashMap(final String input) {
+    public static boolean hasAllUniqueCharactersHashMap(final String input) {
         HashSet<String> set = new HashSet<>();
 
         char[] chars = input.toCharArray();

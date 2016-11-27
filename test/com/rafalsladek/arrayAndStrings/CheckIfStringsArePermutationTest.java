@@ -1,8 +1,7 @@
-package com.rafalsladek.arraysAndStrings;
+package com.rafalsladek.arrayAndStrings;
 
+import com.rafalsladek.arraysAndStrings.CheckIfStringsArePermutation;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 public class CheckIfStringsArePermutationTest {
     @Test

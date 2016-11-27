@@ -2,7 +2,6 @@ package com.rafalsladek.stacksAndQueues;
 
 import org.junit.Test;
 import org.omg.CORBA.Object;
-import scala.Int;
 
 import static org.junit.Assert.*;
 

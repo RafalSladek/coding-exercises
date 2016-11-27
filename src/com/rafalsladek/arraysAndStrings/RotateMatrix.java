@@ -20,7 +20,7 @@ public class RotateMatrix {
      * @param inputMatrix
      * @return
      */
-    static char[][] rotateMatrix(char[][] inputMatrix) {
+    public static char[][] rotateMatrix(char[][] inputMatrix) {
         int n = inputMatrix.length;
         int lastIndex = n - 1;
         char[][] output = new char[n][n];
