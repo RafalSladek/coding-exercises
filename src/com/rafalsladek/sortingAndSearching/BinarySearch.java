@@ -6,6 +6,7 @@ public class BinarySearch {
      * BinarySearch
      * Time: O(logN)
      * Space: O(1)
+     * Link - https://www.youtube.com/watch?v=P3YID7liBug
      * @param array
      * @param x
      * @return
@@ -32,5 +33,22 @@ public class BinarySearch {
         } else {
             return binarySearchRecursively(array, x, mid + 1, right);
         }
+    }
+
+    public static boolean binarySearchIterative(int[] array, int x) {
+        int left = 0;
+        int right = array.length - 1;
+
+        while (left <= right) {
+            int mid = left + ((right - left) / 2);
+            if (array[mid] == x) {
+                return true;
+            } else if (x < array[mid]) {
+                right = mid - 1;
+            } else {
+                left = mid + 1;
+            }
+        }
+        return false;
     }
 }
