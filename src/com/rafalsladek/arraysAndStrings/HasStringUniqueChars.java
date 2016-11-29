@@ -23,12 +23,12 @@ public class HasStringUniqueChars {
         Arrays.sort(numArray);
         int xorComperator = 0;
 
-        for (int i = 0; i < numArray.length; i++) {
-            xorComperator = xorComperator ^ numArray[i];
+        for (int aNumArray : numArray) {
+            xorComperator = xorComperator ^ aNumArray;
             if (xorComperator == 0) {
                 return false;
             } else {
-                xorComperator = numArray[i];
+                xorComperator = aNumArray;
             }
         }
         return xorComperator != 0;
@@ -50,8 +50,8 @@ public class HasStringUniqueChars {
         HashSet<String> set = new HashSet<>();
 
         char[] chars = input.toCharArray();
-        for (int i = 0; i < chars.length; i++) {
-            String s = String.valueOf(chars[i]);
+        for (char aChar : chars) {
+            String s = String.valueOf(aChar);
             if (set.contains(s)) {
                 return false;
             } else {

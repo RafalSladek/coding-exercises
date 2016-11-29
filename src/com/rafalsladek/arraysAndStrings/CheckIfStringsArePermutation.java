@@ -20,11 +20,11 @@ public class CheckIfStringsArePermutation {
         char[] secondArray = second.toCharArray();
         HashSet<String> firstMap = new HashSet<String>();
 
-        for (int i = 0; i < firstArray.length; i++) {
-            firstMap.add(String.valueOf(firstArray[i]));
+        for (char aFirstArray : firstArray) {
+            firstMap.add(String.valueOf(aFirstArray));
         }
-        for (int i = 0; i < secondArray.length; i++) {
-            if (!firstMap.remove(String.valueOf(secondArray[i]))) {
+        for (char aSecondArray : secondArray) {
+            if (!firstMap.remove(String.valueOf(aSecondArray))) {
                 return false;
             }
         }

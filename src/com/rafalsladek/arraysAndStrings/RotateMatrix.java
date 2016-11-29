@@ -11,8 +11,8 @@ public class RotateMatrix {
 
     /**
      * Big O(n^2)
-     * Rotates input matrix clocwise 90°.
-     * Here how it can be transofr to array
+     * Rotates input matrix clockwise 90°.
+     * Here how it can be transform to array
      * row  0     1    2    n
      * abcd efgh ijkl mnop
      * miea njfb okgc plhd
